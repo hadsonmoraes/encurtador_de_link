@@ -16,10 +16,12 @@ if (!empty($full_url) && filter_var($full_url, FILTER_VALIDATE_URL)) {
         echo $existing_record['shorten_url'];
     } else {
         $ran_url = substr(md5(microtime()), rand(0, 26), 5);
-        $sql_insert_url = mysqli_query($conn, "INSERT INTO url (full_link, shorten_url, clicks) 
-                                             VALUES ('{$full_url}', '{$ran_url}', '0')");
+        $sql_insert_url = mysqli_query($conn, "INSERT INTO url (full_link, shorten_url, clicks, nome) 
+                                             VALUES ('{$full_url}', '{$ran_url}', '0', '')");
         if ($sql_insert_url) {
             echo $ran_url;
+        } else {
+            echo "Erro ao salvar URL no banco de dados.";
         }
     }
 } else {

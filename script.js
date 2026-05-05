@@ -1,6 +1,6 @@
 const form = document.querySelector(".wrapper form"),
     fullURL = form.querySelector("input"),
-    shortenBtn = form.querySelector("form button"),
+    shortenBtn = form.querySelector("button"),
     blurEffect = document.querySelector(".blur-effect"),
     popupBox = document.querySelector(".popup-box"),
     infoBox = popupBox.querySelector(".info-box"),
@@ -64,7 +64,7 @@ shortenBtn.onclick = () => {
 
 const fileInput = document.getElementById('fileInput');
 const uploadButton = document.getElementById('uploadButton');
-const icon = document.querySelector("form .file-icon");
+const icon = document.querySelector(".file-icon");
 const textInput = document.getElementById('textInput');
 
 fileInput.addEventListener('change', function () {
@@ -106,7 +106,6 @@ textInput.addEventListener('input', function () {
         textInput.style.border = '';
     }
 });
-
 
 
 
